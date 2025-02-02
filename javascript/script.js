@@ -3,7 +3,7 @@ function obtenerResultado(elementId) {
   return elemento.value;
 }
 
-function manejarEnvioFormulario(event) {
+function EnvioFormulario(event) {
   event.preventDefault();
 
   const razon = obtenerResultado("reason");
@@ -46,4 +46,4 @@ function mostrarResultado(orientacion) {
 }
 
 const formulario = document.getElementById("orientationForm");
-formulario.addEventListener("submit", manejarEnvioFormulario);
+formulario.addEventListener("submit", EnvioFormulario);
