@@ -1,2 +1,0 @@
-# bit-grupo
-##  Manuela Álvarez
