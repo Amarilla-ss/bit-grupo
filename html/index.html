@@ -1,62 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario de Orientación Sexual</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/CSS/estilos.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/estilos.css" />
+  </head>
+  <body>
     <div class="container">
       <h1 class="mt-5">Formulario de Orientación Sexual</h1>
-<form id="orientationForm" class="mt-4">
-    <div class="form-step">
-     <div for="reason">¿Por qué decidiste realizar la prueba?</div>
-     <select name="form-control" id="reason" required>
-    <option value="Seleccione una opción"></option>
-    <option value="dudas">Para comprobar mis dudas sobre mi orientación sexual</option>
-    <option value="atraccion">A veces me atraen personas de mi mismo sexo</option>
-     </select>
-     <button type="button" class="btn-primary next-step">Siguiente</button>
-    </div>
-    <div class="form-step">
-        <div>¿Alguna vez has mirado a una persona del mismo sexo y te has sentido atraído de forma</div>
-        <select class="form-control" id="attraction" required>
-        <option value="">Seleccione una opción</option>
-        <option value="si">Sí</option>
-         <option value="no">No</option>
-        <option value="a veces">A veces</option>
-        </select>
-        <button type="button" class="btn-primary next-step">Siguiente</button>
-    </div>
-    <div class="form-step">
-        <div>¿Alguna vez has besado a alguien del mismo sexo?</div>
-        <select class="form-control" id="kiss" required>
-        <option value="">Seleccione una opción</option>
-       <option value="si">Sí</option>
-       <option value="no">No</option>
-        <option value="pocas veces">Pocas veces</option>
-        </select>
-        <button type="button" class="btn-primary next-step">Siguiente</button>
-     </div>
-            <div class="form-step">
-        <div>¿Cómo te sentirías si una persona de tu mismo sexo coqueteara contigo?</div>
-        <select class="form-control" id="flirt" required>
-        <option value="">Seleccione una opción</option>
-        <option value="interesado">Interesado</option>
-        <option value="incómodo">Incómodo</option>
-        <option value="me daria igual">Me daría igual</option>
-        <option value="me haria cuestionar">Me haría cuestionar</option>
-        </select>
-        <button type="button" class="btn-primary next-step"></button>
+      <form id="orientationForm" class="mt-4">
+        <div class="form-step">
+          <div for="reason">¿Por qué decidiste realizar la prueba?</div>
+          <select name="form-control" id="reason" required>
+            <option value="Seleccione una opción"></option>
+            <option value="dudas">
+              Para comprobar mis dudas sobre mi orientación sexual
+            </option>
+            <option value="atraccion">
+              A veces me atraen personas de mi mismo sexo
+            </option>
+          </select>
+          <button type="button" class="btn-primary next-step">Siguiente</button>
         </div>
         <div class="form-step">
-        <button type="submit" class="btn-success">Ver Resultado</button>
+          <div>
+            ¿Alguna vez has mirado a una persona del mismo sexo y te has sentido
+            atraído de forma
+          </div>
+          <select class="form-control" id="attraction" required>
+            <option value="">Seleccione una opción</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+            <option value="a veces">A veces</option>
+          </select>
+          <button type="button" class="btn-primary next-step">Siguiente</button>
         </div>
-</form>
-<div id="result" class="result mt-4"></div>
+        <div class="form-step">
+          <div>¿Alguna vez has besado a alguien del mismo sexo?</div>
+          <select class="form-control" id="kiss" required>
+            <option value="">Seleccione una opción</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+            <option value="pocas veces">Pocas veces</option>
+          </select>
+          <button type="button" class="btn-primary next-step">Siguiente</button>
+        </div>
+        <div class="form-step">
+          <div>
+            ¿Cómo te sentirías si una persona de tu mismo sexo coqueteara
+            contigo?
+          </div>
+          <select class="form-control" id="flirt" required>
+            <option value="">Seleccione una opción</option>
+            <option value="interesado">Interesado</option>
+            <option value="incómodo">Incómodo</option>
+            <option value="me daria igual">Me daría igual</option>
+            <option value="me haria cuestionar">Me haría cuestionar</option>
+          </select>
+          <button type="button" class="btn-primary next-step"></button>
+        </div>
+        <div class="form-step">
+          <button type="submit" class="btn-success">Ver Resultado</button>
+        </div>
+      </form>
+      <div id="result" class="result mt-4"></div>
     </div>
     <script src="/javascript/script.js"></script>
-</body>
+  </body>
 </html>
