@@ -26,17 +26,18 @@ document.addEventListener("DOMContentLoaded", function () {
   function determinarOrientacion(respuestas) {
     let puntaje = 0;
 
-    if (respuestas.razon === "dudas") puntaje += 1;
+    if (respuestas.razon === "diversion") puntaje += 0;
+    if (respuestas.razon === "dudas") puntaje += 2;
     if (respuestas.razon === "atraccion") puntaje += 3;
     if (respuestas.atraccion === "si") puntaje += 3;
     if (respuestas.atraccion === "a veces") puntaje += 2;
-    if (respuestas.atraccion === "no") puntaje += 1;
+    if (respuestas.atraccion === "no") puntaje += 0;
     if (respuestas.beso === "si") puntaje += 3;
     if (respuestas.beso === "pocas veces") puntaje += 2;
     if (respuestas.beso === "no") puntaje += 1;
     if (respuestas.coqueteo === "interesado") puntaje += 3;
-    if (respuestas.coqueteo === "incomodo") puntaje += 1;
-    if (respuestas.coqueteo === "me daria igual") puntaje += 2;
+    if (respuestas.coqueteo === "incomodo") puntaje += 0;
+    if (respuestas.coqueteo === "me daria igual") puntaje += 1;
     if (respuestas.coqueteo === "me haria cuestionar") puntaje += 2;
 
     if (puntaje >= 10) {
