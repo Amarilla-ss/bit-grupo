@@ -1,0 +1,96 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  color: #fff;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary,
+.btn-success {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: #ff758c;
+  margin-top: 10px;
+}
+
+.btn-success {
+  background: #4caf50;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.result {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .form-control,
+  .btn-primary,
+  .btn-success {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .form-control,
+  .btn-primary,
+  .btn-success {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .form-control,
+  .btn-primary,
+  .btn-success {
+    font-size: 1.1rem;
+  }
+}

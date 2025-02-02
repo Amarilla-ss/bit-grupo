@@ -1,44 +1,49 @@
-const respuestas = (r1, r2, r3, r4);
-function calculo() {
-  if (respuestas.sort().includes()) {
-    res;
+function obtenerResultado(elementId) {
+  const elemento = document.getElementById(elementId);
+  return elemento.value;
+}
+
+function manejarEnvioFormulario(event) {
+  event.preventDefault();
+
+  const razon = obtenerResultado("reason");
+  const atraccion = obtenerResultado("attraction");
+  const beso = obtenerResultado("kiss");
+  const coqueteo = obtenerResultado("flirt");
+
+  const respuestas = {
+    razon,
+    atraccion,
+    beso,
+    coqueteo,
+  };
+
+  const orientacion = determinarOrientacion(respuestas);
+
+  mostrarResultado(orientacion);
+}
+
+function determinarOrientacion(respuestas) {
+  let puntaje = 0;
+
+  if (respuestas.razon === "dudas") puntaje += 1;
+  if (respuestas.atraccion === "si") puntaje += 2;
+  if (respuestas.beso === "si") puntaje += 2;
+  if (respuestas.coqueteo === "interesado") puntaje += 1;
+
+  if (puntaje >= 5) {
+    return "Posiblemente homosexual";
+  } else if (puntaje >= 3) {
+    return "Posiblemente bisexual";
+  } else {
+    return "Posiblemente heterosexual";
   }
 }
 
-document
-  .getElementById("orientacionForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+function mostrarResultado(orientacion) {
+  const resultadoElement = document.getElementById("result");
+  resultadoElement.innerText = `Tu orientación sexual es: ${orientacion}`;
+}
 
-    const respuesta1 = document.querySelector(
-      'input[name="pregunta1"]:checked'
-    );
-    const respuesta2 = document.querySelector(
-      'input[name="pregunta2"]:checked'
-    );
-    const respuesta3 = document.querySelector(
-      'input[name="pregunta3"]:checked'
-    );
-    const respuesta4 = document.querySelector('input[name="pregunta4"]').value;
-
-    let resultado = "";
-
-    if (respuesta1 && respuesta2) {
-      const esAtraidoMismoSexo = respuesta1.value === "sí";
-      const esAtraidoSexoOpuesto = respuesta2.value === "sí";
-
-      if (esAtraidoMismoSexo && !esAtraidoSexoOpuesto) {
-        resultado = "Podrías identificarte como homosexual.";
-      } else if (esAtraidoSexoOpuesto && !esAtraidoMismoSexo) {
-        resultado = "Podrías identificarte como heterosexual.";
-      } else if (esAtraidoMismoSexo && esAtraidoSexoOpuesto) {
-        resultado = "Podrías identificarte como bisexual.";
-      } else {
-        resultado =
-          "La orientación sexual puede ser diversa y no siempre se puede clasificar fácilmente.";
-      }
-    }
-
-    // Mostrar el resultado
-    document.getElementById("resultado").innerText = resultado;
-  });
+const formulario = document.getElementById("orientationForm");
+formulario.addEventListener("submit", manejarEnvioFormulario);
